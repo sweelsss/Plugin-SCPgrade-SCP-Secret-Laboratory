@@ -1,6 +1,9 @@
-# сборка
+# сборка (готовые dll — только в GitHub Releases, не в репозитории)
 bin/
 obj/
+dist/
+*.dll
+*.pdb
 *.user
 .vs/
 .idea/

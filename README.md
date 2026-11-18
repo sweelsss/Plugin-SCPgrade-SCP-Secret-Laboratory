@@ -29,7 +29,7 @@
 
 ## Установка
 
-Скачай dll из [Releases](../../releases) и поставь **только одну** из двух:
+В репозитории только исходный код. Готовые dll скачай из [Releases](../../releases) (или собери сам — см. «Сборка из исходников») и поставь **только одну** из двух:
 
 ### LabAPI
 1. `SCPGrade.dll` → `%AppData%\SCP Secret Laboratory\LabAPI\plugins\global\`
