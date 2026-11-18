@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EXILED-версия → bin/Exiled/SCPGrade.Exiled.dll → EXILED/Plugins/ -->
+  <PropertyGroup>
+    <AssemblyName>SCPGrade.Exiled</AssemblyName>
+    <DefineConstants>$(DefineConstants);EXILED</DefineConstants>
+    <OutputPath>bin\Exiled\</OutputPath>
+    <IntermediateOutputPath>obj\Exiled\</IntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Папка с Exiled.API.dll и Exiled.Events.dll из релиза EXILED 9.x -->
+    <EXILED_REFERENCES Condition="'$(EXILED_REFERENCES)' == ''">$(MSBuildThisFileDirectory)references\exiled</EXILED_REFERENCES>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Exiled.API" HintPath="$(EXILED_REFERENCES)\Exiled.API.dll" Private="false" />
+    <Reference Include="Exiled.Events" HintPath="$(EXILED_REFERENCES)\Exiled.Events.dll" Private="false" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+# сборка
+bin/
+obj/
+*.user
+.vs/
+.idea/
+*.suo
+
+# библиотеки игры и EXILED не выкладываем (лицензия Northwood / EXILED)
+references/*
+!references/README.md

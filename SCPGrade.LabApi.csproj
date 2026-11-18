@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- LabAPI-версия → bin/Release/net48/SCPGrade.dll → LabAPI/plugins/global/ -->
+  <PropertyGroup>
+    <AssemblyName>SCPGrade</AssemblyName>
+    <OutputPath>bin\LabApi\</OutputPath>
+    <IntermediateOutputPath>obj\LabApi\</IntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+</Project>

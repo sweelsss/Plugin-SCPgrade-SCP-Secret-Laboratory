@@ -1,0 +1,118 @@
+# Пример конфига SCPGrade (LabAPI: LabAPI/configs/<порт>/SCPGrade/config.yml).
+# В EXILED те же ключи лежат в EXILED/Configs/<порт>-config.yml в разделе scpgrade: (плюс is_enabled).
+debug: false
+# Ставить в мире SCPGRADE (место — командой upg here, иначе комната из screen_room, иначе Башня).
+spawn_kiosk: true
+# true — в мире большой экран, у каждого игрока своя копия (видит только своё, все крутят одновременно). false — маленькая стойка, открывающая планшет.
+world_screen: true
+# Размер большого экрана (1 = 4.4 x 2.75 м) и с какого расстояния у игрока появляется его копия.
+world_screen_scale: 0.6
+world_view_distance: 25
+# Комната для экрана по умолчанию (RoomName). Lcz173 = PT-00, бывшая камера SCP-173. Пусто — Башня.
+screen_room: Lcz173
+# Смещение внутри комнаты (локальные координаты комнаты, метры) и поворот экрана в градусах.
+screen_room_offset_x: 0
+screen_room_offset_y: 1
+screen_room_offset_z: 0
+screen_room_yaw: 0
+# Планшет (.scpgrade) работает только в этих зонах: LightContainment, HeavyContainment, Entrance, Surface.
+tablet_zones:
+- LightContainment
+- HeavyContainment
+# Смещение стойки от точки спавна Башни (если комната не найдена): вперёд / вправо / вверх (метры).
+offset_forward: 1.8
+offset_right: 0
+offset_up: 0
+# Размер планшета (1 = большой экран 4.4 м, 0.32 = ~1.4 м) и на каком расстоянии от игрока он появляется.
+tablet_scale: 0.32
+tablet_distance: 0.95
+# Планшет закрывается сам: если отойти от места, где его открыл, дальше N метров, или ничего не нажимать N секунд.
+tablet_max_distance: 2
+tablet_idle_close: 90
+# Подсветка экрана/планшета (видна только владельцу).
+tablet_light: true
+tablet_light_intensity: 0.6
+# Минимальный и максимальный шанс апгрейда (в процентах).
+min_chance: 1
+max_chance: 80
+# Комиссия — на сколько процентов урезается честный шанс (0.10 = 10%).
+house_edge: 0.1
+# Длительность прокрутки (сек), полных оборотов стрелки, сколько держать E на «Улучшить».
+spin_duration: 6
+spin_turns: 5
+upgrade_hold_time: 0.6
+# Ценность предметов. Ключ — название ItemType (или PinkCandy — розовая конфета). 0 или отсутствие — предмет нельзя улучшить/получить.
+# Ивентовые предметы (уголь, снежок, диктофон, фонарь и т.п.) всегда исключены.
+item_values:
+  Coin: 5
+  Flashlight: 12
+  Radio: 25
+  SCP330: 40
+  Painkillers: 30
+  Medkit: 60
+  Adrenaline: 75
+  KeycardJanitor: 15
+  KeycardScientist: 30
+  KeycardResearchCoordinator: 50
+  KeycardZoneManager: 60
+  KeycardGuard: 75
+  KeycardMTFPrivate: 110
+  KeycardContainmentEngineer: 125
+  SurfaceAccessPass: 150
+  KeycardMTFOperative: 165
+  KeycardMTFCaptain: 220
+  KeycardFacilityManager: 250
+  KeycardChaosInsurgency: 280
+  KeycardO5: 400
+  ArmorLight: 60
+  ArmorCombat: 140
+  ArmorHeavy: 220
+  GrenadeFlash: 80
+  GrenadeHE: 150
+  GunCOM15: 80
+  GunCOM18: 110
+  GunFSP9: 160
+  GunRevolver: 190
+  GunCrossvec: 200
+  GunShotgun: 240
+  GunCom45: 260
+  GunAK: 280
+  GunA7: 300
+  GunE11SR: 320
+  GunLogicer: 400
+  GunFRMG0: 420
+  GunSCP127: 450
+  Jailbird: 500
+  ParticleDisruptor: 650
+  MicroHID: 800
+  SCP2176: 120
+  SCP1853: 140
+  SCP1576: 150
+  SCP207: 160
+  AntiSCP207: 170
+  SCP018: 180
+  SCP244a: 190
+  SCP244b: 190
+  SCP500: 200
+  SCP1344: 210
+  SCP268: 230
+  PinkCandy: 350
+# Необязательно: ссылка на JSON {"GunE11SR": 320, ...} — перекрывает значения выше. Пусто = только конфиг.
+values_url: ''
+# Что нельзя получить как цель / нельзя улучшать.
+target_blacklist: []
+input_blacklist: []
+# Звуки (слышит только владелец). Диапазон ID колонок: у каждого экрана/планшета своя.
+enable_sounds: true
+volume: 1
+speaker_id_start: 120
+speaker_id_count: 60
+# Язык по умолчанию (Ru / En). Игрок меняет его в Настройки → Сервер.
+default_language: Ru
+language_setting_id: 7301
+# Масштаб и калибровка текста (команды upg scale / upg calib).
+text_scale: 0.065
+text_calibration: 0.051
+# Подпись в шапке.
+author: sweelsss
+discord: '@sweeelsss'
